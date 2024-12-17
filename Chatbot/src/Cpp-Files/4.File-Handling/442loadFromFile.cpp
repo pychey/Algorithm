@@ -1,4 +1,4 @@
-#include "../Header-Files/Chatbot.hpp"
+#include "../../Header-Files/Chatbot.hpp"
 
 void Chatbot::loadFromFile(){
     string question;
@@ -7,6 +7,9 @@ void Chatbot::loadFromFile(){
     ifstream file(filePath);
     if(file.is_open()){
         while(getline(file,question)){
+            if(question.size()==0){
+                continue;
+            }
             getline(file,answer);
             linkQA(question,answer);
         }

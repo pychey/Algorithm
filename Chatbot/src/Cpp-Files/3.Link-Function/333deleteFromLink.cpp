@@ -1,4 +1,4 @@
-#include "../Header-Files/Chatbot.hpp"
+#include "../../Header-Files/Chatbot.hpp"
 
 void Chatbot::deleteFromLink(QA* target_QA){
     if(target_QA==firstQA){

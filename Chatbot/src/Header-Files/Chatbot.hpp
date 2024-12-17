@@ -34,11 +34,15 @@ public:
     void improveQA(string question);
     void deleteQA(string question);
 
-    //3.linked-list and file handling
+    //3.linked-list
     void linkQA(string question, string answer);
+    void improveInLink(string question,string newAnswer);
     void deleteFromLink(QA* target_QA);
+
+    //4.file-handling
     void writeToFile(string question, string answer);
     void loadFromFile();
+    void improveInFile(string question,string newAnswer);
     void deleteFromFile(string question);
 };
 

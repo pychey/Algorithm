@@ -1,4 +1,4 @@
-#include "../Header-Files/Chatbot.hpp"
+#include "../../Header-Files/Chatbot.hpp"
 
 void Chatbot::writeToFile(string question, string answer){
     ofstream file(filePath, ios::app);
@@ -6,6 +6,7 @@ void Chatbot::writeToFile(string question, string answer){
         file << question << endl;
         file << answer << endl;
         file.close();
+        cout << "QA added successfully" << endl;
     } else {
         cout << "File opened unsucessfully" << endl;
         return;

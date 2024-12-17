@@ -1,9 +1,8 @@
-#include "../Header-Files/Chatbot.hpp"
+#include "../../Header-Files/Chatbot.hpp"
 
 void Chatbot::deleteFromFile(string questionForDeleted) {
     string question;
     string answer;
-
     ifstream file(filePath);
     ofstream tempFile(fileTemp, ios::app);
     if(file.is_open()){

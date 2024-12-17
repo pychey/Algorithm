@@ -1,6 +1,6 @@
-#include "../Header-Files/Chatbot.hpp"
+#include "../../Header-Files/Chatbot.hpp" 
 
-void Chatbot::improveQA(string questionToImprove) {
+void Chatbot::improveInFile(string questionToImprove,string newAnswer) {
     string question;
     string answer;
     bool found = false;
@@ -9,16 +9,15 @@ void Chatbot::improveQA(string questionToImprove) {
     while(getline(file,question)){
         getline(file,answer);
         if(question == questionToImprove){
-            cout << "New Answer: ";
-            getline(cin, answer);
+            tempFile << questionToImprove << endl;
+            tempFile << newAnswer << endl;
+        } else {
+            tempFile << question << endl;
+            tempFile << answer << endl;
         }
-        tempFile << question << endl;
-        tempFile << answer << endl;
     }
     file.close();
     tempFile.close();
     remove("QA.txt");
     rename("temp.txt","QA.txt");
-
-    //still not done, need to also improve linked-link's answer
 }

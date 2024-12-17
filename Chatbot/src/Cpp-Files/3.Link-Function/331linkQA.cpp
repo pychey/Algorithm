@@ -1,4 +1,4 @@
-#include "../Header-Files/Chatbot.hpp"
+#include "../../Header-Files/Chatbot.hpp"
 
 void Chatbot::linkQA(string question, string answer) {
     QA* newQA = new QA(question,answer);
