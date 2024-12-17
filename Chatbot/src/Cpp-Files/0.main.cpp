@@ -9,6 +9,7 @@ int main() {
     string question,previous_question;
     string answer;
     Chatbot bot;
+    bot.loadFromFile();
     cout << "Hello, how can i help you?" << endl;
     while(running){
         getline(cin,question);
