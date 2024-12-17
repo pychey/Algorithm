@@ -53,14 +53,3 @@ int main() {
     return 0;
 }
 
-// string question;
-// Chatbot pychey;
-// pychey.loadFromFile();
-// pychey.displayQA();
-// pychey.addQA();
-// pychey.addQA();
-// cout << "Write a question: ";
-// getline(cin,question);
-// if(pychey.findQ_returnQA(question)){
-//     cout << "Answeer: " << pychey.giveA(question) << endl;
-// }
