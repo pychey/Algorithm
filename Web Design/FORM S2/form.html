@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+</head>
+<body>
+    <form>
+        <h1>Create Account</h1>
+        <fieldset>
+            <span>
+                <label for="fname">First name *</label>
+                <input type="text" id="fname" placeholder="enter your first name" required>
+            </span>
+            <span>
+                <label for="lname">Last name</label>
+                <input type="text" id="lname" placeholder="enter your last name">
+            </span>
+            <span>
+                <label for="email">Email *</label>
+                <input type="text" id="email" placeholder="enter your email" required>
+            </span>
+            <span>
+                <label for="pass">Password *</label>
+                <input type="password" id="pass" placeholder="enter your password" required>
+            </span>
+            <span>
+                <label for="conpass">Confirm Password *</label>
+                <input type="password" id="conpass" placeholder="enter your password again" required>
+            </span>
+            <span>
+                <label for="gender">Gender</label>
+                <input type="radio" id="male" name="gender">
+                <label class="gender" for="male">Male</label>
+                <input type="radio" id="female" name="gender">
+                <label class="gender" for="female">Female</label>
+            </span>
+            <span>
+                <label for="hobby">Hobbies</label>
+                <div class="checkbox-container">
+                    <input type="checkbox" id="music">
+                    <label class="checkbox" for="music">Music</label>
+                    <input type="checkbox" id="sport">
+                    <label class="checkbox" for="sport">Sport</label>
+                    <input type="checkbox" id="travel">
+                    <label class="checkbox" for="travel">Travel</label>
+                    <input type="checkbox" id="movie">
+                    <label class="checkbox" for="movie">Movie</label>
+                </div>
+            </span>
+
+            <span>
+                <label for="source">Source of Income</label>
+                <select>
+                    <option>Employed</option>
+                    <option>Business Owner</option>
+                    <option>Unemployed</option>
+                </select>
+            </span>
+            
+            <span>
+                <label for="income">Income</label>
+                <div class="range">
+                    <input type="range" value="20" min="20" max="200" oninput="this.nextElementSibling.value = this.value"> <!--I got this range from internet but did CSS myself-->
+                    <output>20</output><p>K</p>
+                </div>
+            </span>
+            <span>
+                <label for="file">Upload Profile Picture</label>
+                <input type="file">
+            </span>
+            <span>
+                <label for="age">Age (18-60)</label>
+                <input type="number" min="18" max="60">
+            </span>
+            <span>
+                <label>Bio</label>
+                <textarea rows="5"></textarea>
+            </span>
+        </fieldset>
+        <div class="bottom">
+            <button>Create</button>
+        </div>
+    </form>
+    <script>
+        document.getElementById("music").indeterminate = true;
+        document.getElementById("sport").indeterminate = true;
+        document.getElementById("travel").indeterminate = true;
+        document.getElementById("movie").indeterminate = true;
+    </script>
+</body>
+</html>

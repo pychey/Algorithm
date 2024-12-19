@@ -1,0 +1,214 @@
+* {
+    margin:0px;
+    padding:0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #548091;
+    font-size: 12px;;
+    font-family: Arial, Helvetica, sans-serif;
+    color:#3dc5a3;
+    font-weight: bold;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    border-radius: 10px;
+    margin:1.5rem;
+    background-color: #fafbfa;
+    width: 800px;
+    display:grid;
+    grid-template-rows: 70px auto 70px;
+    justify-items: center;
+}
+
+h1 {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    width: 100%;
+    background-color: #eef1f1;
+    padding:1rem;
+    color:#5e5e5e;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+
+fieldset {
+    width: 100%;
+    border:2px solid #e6e6e6;
+    border-left: none;
+    border-right: none;
+    padding:30px;
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(6,1fr) 100px;
+    gap: 20px;
+}
+
+span:nth-child(3){
+    grid-column: span 2;
+}
+
+span:nth-child(12){
+    grid-column: span 2;
+}
+
+input[type=text],select,input[type=number],textarea,input[type="password"]{
+    background-color: #fff;
+    width:100%;
+    border:1px solid #e6e6e6;
+    border-radius: 5px;
+    padding:5px;
+}
+
+input::placeholder{
+    color:#e6e6e6;
+}
+
+input:focus , select:focus, textarea:focus{
+    outline: none;
+    border:1px solid blue;
+    background-color: #fafafa;
+}
+
+button:hover {
+    background-color:#277d67;
+}
+
+.checkbox-container {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    height: 11px;
+    width: 11px;
+    background-color: #fff;
+    border:1px solid #e6e6e6;
+    border-radius:2px;
+    margin-right:2px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+input[type="checkbox"]::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f00c";
+    color:#3dc5a3;
+    font-size: 10px;
+    display: none;
+}
+
+input[type="checkbox"]:indeterminate::after {
+    font-family: "Font Awesome 5 Free";
+    content: "\f068";
+    color:#3dc5a3;
+    font-size: 8px;
+    display: contents;
+}
+
+input[type="checkbox"]:checked::after {
+    display: contents;
+}
+  
+input[type=text],select,input[type=number],input[type=password] {
+    height:1.5rem;
+}
+
+.range {
+    padding-top:1px;
+    display:flex;
+    align-items: center;
+}
+
+input[type=range] {
+    width:80%;
+    margin-right: 10px;
+}
+
+output,p {
+    height:1.5rem;
+    background-color: #3dc5a3;
+    color:#fff;
+    font-weight: lighter;
+    display: flex;
+    align-items: center;
+}
+
+output {
+    width:10%;
+    justify-content: flex-end;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+
+p {
+    width:7%;
+    justify-content: flex-start;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+label[for="gender"], label[for="hobby"] {
+    margin-bottom: 10px;
+}
+
+label[for="hobby"],label[for="income"],
+label[for="source"],label[for="file"], 
+label[for="age"],label[for="gender"] {
+    display: block;
+}
+
+.gender, .checkbox {
+    font-size: 0.7rem;
+    font-weight:lighter;
+    color:#333;
+    margin-right:0.3rem;
+    cursor: pointer;
+}
+
+.bottom {
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width:100%;
+    background-color: #eef1f1;
+    display:flex;
+    justify-content: end;
+    align-items: center;
+}
+
+button {
+    margin:30px;
+    font-weight: lighter;
+    font-size: 12px;
+    width:80px;
+    height:30px;
+    color:#fff;
+    background-color: #3dc5a3;
+    border-style:none;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width:1000px){
+    form{
+        width:700px;
+    }
+}
+
+@media only screen and (max-width:700px){
+    .checkbox,.gender {
+        font-size: 0.6rem;
+        margin-right: 0.1rem;
+    }
+    form{
+        width:550px;
+    }
+}
